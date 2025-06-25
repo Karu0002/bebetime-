@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoebomoto - Online Shoe Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="shoebomo2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-area">
+                <img src="LOGO.png" alt="Logo" class="logo-img">
+                <h1 class="logo-text">Shoebomoto</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Shop</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="cart-btn" class="nav-link cart-button-wrapper">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <span id="cart-count" class="cart-count-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Featured Collection</h2>
+                <button class="btn btn-primary">All</button>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80" alt="Running Shoes" class="product-image">
+                        <span class="product-badge">NEW</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3 class="product-name">AirMax Pro</h3>
+                            <span class="product-price">$129.99</span>
+                        </div>
+                        <p class="product-description">High-performance running shoes with advanced cushioning.</p>
+                        <button class="add-to-cart btn btn-sm btn-primary" data-id="1" data-name="AirMax Pro" data-price="129.99" data-img="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-text">At Shoebomoto, we provide the best footwear for every occasion. From performance running shoes to trendy casual sneakers, we elevate your style and performance with the right pair.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-input" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3 class="cart-title">Your Shopping Cart</h3>
+                <button id="close-cart" class="close-cart-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="cart-items" class="cart-items-container">
+                <p id="empty-cart-message" class="empty-cart-message">Your cart is empty</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total-container">
+                    <span class="cart-total-label">Total:</span>
+                    <span id="cart-total" class="cart-total-amount">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-block">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <script src="shoebomo3.js"></script>
+</body>
+</html>
